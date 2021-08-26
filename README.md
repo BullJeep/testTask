@@ -19,33 +19,8 @@
 ## Установка 👷
 Для работы использовалась платформа `8.3.14.1944`
 
-### С EDT исходников 🔥
-Склонируйте репозиторий и соберите в [EDT](https://edt.1c.ru/) 
-
-Linux 🐧
-```sh
-git clone https://git.kt.ua/v8/test.git
-ring edt workspace export --workspace-location "${PWD}/w" --project "${PWD}/Test" --configuration-files "${PWD}/xml"
-1cv8 CREATEINFOBASE File=${PWD}/db
-1cv8 DESIGNER /WA- /DisableStartupDialogs /IBConnectionString File="${PWD}/db" /LoadConfigFromFiles "${PWD}/xml" /UpdateDBCfg
-1cv8 DESIGNER /WA- /DisableStartupDialogs /IBConnectionString File="${PWD}/db" /CreateDistributionFiles -cffile "${PWD}/1cv8.cf"
-```
-
-Windows 🪟 
-```ps1
-# powershell 7
-
-git clone https://git.kt.ua/v8/test.git
-ring edt workspace export --workspace-location "${PWD}/w" --project "${PWD}/Test" --configuration-files "${PWD}/xml"
-&'C:\Program files\1cv8\8.3.14.1944\bin\1cv8' CREATEINFOBASE File=${PWD}/db
-&'C:\Program files\1cv8\8.3.14.1944\bin\1cv8' DESIGNER /WA- /DisableStartupDialogs /IBConnectionString File="${PWD}/db" /LoadConfigFromFiles "${PWD}/xml" /UpdateDBCfg
-&'C:\Program files\1cv8\8.3.14.1944\bin\1cv8' DESIGNER /WA- /DisableStartupDialogs /IBConnectionString File="${PWD}/db" /CreateDistributionFiles -cffile "${PWD}/1cv8.cf"
-```
-
-в папке db будет файловая версия базы
-
 ### С cf файла 📦
-В разделе релизы есть актуальная версия [cf](https://git.kt.ua/1c/test/uploads/70de412df3e15f4d860d35a0fb680ecb/1cv8.cf) файла
+В разделе релизы есть актуальная версия [cf](https://github.com/kt-ukraine/testTask/releases/download/0.1.0/1cv8-test.cf) файла
 
 ## Задачи 📝
 
