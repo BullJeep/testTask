@@ -31,7 +31,7 @@ ring edt workspace export --workspace-location "${PWD}/w" --project "${PWD}/Test
 1cv8 DESIGNER /WA- /DisableStartupDialogs /IBConnectionString File="${PWD}/db" /CreateDistributionFiles -cffile "${PWD}/1cv8.cf"
 ```
 
-Windows 🪟 
+Windows 🖼 
 ```ps1
 # powershell 7
 
