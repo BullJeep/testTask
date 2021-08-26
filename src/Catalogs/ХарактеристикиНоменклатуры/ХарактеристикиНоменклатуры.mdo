@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Catalog xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="33198cda-5262-4762-973e-ca4b58cb1e43">
+  <producedTypes>
+    <objectType typeId="672d30f8-5cd0-4b8e-9afb-2649d12b86a4" valueTypeId="7d8df770-2615-45f4-b879-7dc3495749c9"/>
+    <refType typeId="bb5c8f9c-89cb-435f-aa8a-1dfaa6a24c84" valueTypeId="ce4928eb-b7ca-4676-a136-dd552ed06064"/>
+    <selectionType typeId="4c22b776-f0ab-4441-996d-56eb67c87415" valueTypeId="192bb050-afbf-426f-b426-262dc29c9d05"/>
+    <listType typeId="af7324b7-efb4-47e7-a54b-94614b1b54ba" valueTypeId="e63bd896-c156-493b-8a04-23387f257c3d"/>
+    <managerType typeId="f06d0fc9-9de3-4ecd-80b6-add7c04accf2" valueTypeId="be6517d6-2035-4bc9-a4ce-5036e645ed28"/>
+  </producedTypes>
+  <name>ХарактеристикиНоменклатуры</name>
+  <synonym>
+    <key>en</key>
+    <value>Характеристики номенклатуры</value>
+  </synonym>
+  <synonym>
+    <key>ru</key>
+    <value>Характеристики номенклатуры</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <inputByString>Catalog.ХарактеристикиНоменклатуры.StandardAttribute.Code</inputByString>
+  <inputByString>Catalog.ХарактеристикиНоменклатуры.StandardAttribute.Description</inputByString>
+  <fullTextSearchOnInputByString>DontUse</fullTextSearchOnInputByString>
+  <createOnInput>Use</createOnInput>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <fullTextSearch>Use</fullTextSearch>
+  <objectPresentation>
+    <key>ru</key>
+    <value>Характеристика номенклатуры</value>
+  </objectPresentation>
+  <levelCount>2</levelCount>
+  <foldersOnTop>true</foldersOnTop>
+  <owners>Catalog.Номенклатура</owners>
+  <codeLength>3</codeLength>
+  <descriptionLength>100</descriptionLength>
+  <codeType>String</codeType>
+  <codeAllowedLength>Variable</codeAllowedLength>
+  <checkUnique>true</checkUnique>
+  <autonumbering>true</autonumbering>
+  <defaultPresentation>AsDescription</defaultPresentation>
+  <editType>InDialog</editType>
+  <choiceMode>BothWays</choiceMode>
+</mdclass:Catalog>

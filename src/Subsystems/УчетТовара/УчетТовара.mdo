@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Subsystem xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7775b70c-418d-41b3-8203-3e4955d15f86">
+  <name>УчетТовара</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учет товара</value>
+  </synonym>
+  <includeHelpInContents>true</includeHelpInContents>
+  <includeInCommandInterface>true</includeInCommandInterface>
+  <picture xsi:type="core:PictureRef">
+    <picture>CommonPicture.УчетТовара</picture>
+  </picture>
+  <content>Catalog.Номенклатура</content>
+  <content>Catalog.Склады</content>
+  <content>Catalog.ХарактеристикиНоменклатуры</content>
+  <content>Document.ПриходТовара</content>
+  <content>Document.РасходТовара</content>
+  <content>Report.ТоварыНаСкладах</content>
+  <content>AccumulationRegister.ТоварыНаСкладах</content>
+  <content>AccumulationRegister.Закупки</content>
+  <content>Catalog.ВидыНоменклатуры</content>
+</mdclass:Subsystem>

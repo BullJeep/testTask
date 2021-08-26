@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:CommonPicture xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="162678ec-d0ef-492d-94dc-bca454fe08ea">
+  <name>УчетТовара</name>
+  <synonym>
+    <key>ru</key>
+    <value>Учет товара</value>
+  </synonym>
+</mdclass:CommonPicture>

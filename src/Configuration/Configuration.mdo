@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:Configuration xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="7e3352d7-e2d3-4e28-aaed-2902071c46f6">
+  <name>Demo</name>
+  <synonym>
+    <key>en</key>
+    <value>Demo</value>
+  </synonym>
+  <containedObjects classId="9cd510cd-abfc-11d4-9434-004095e12fc7" objectId="7059dda7-f7d6-4a49-a218-db2a97ff7f7a"/>
+  <containedObjects classId="9fcd25a0-4822-11d4-9414-008048da11f9" objectId="dd903d18-0710-4992-a6e3-3e1580ab6381"/>
+  <containedObjects classId="e3687481-0a87-462c-a166-9f34594f9bba" objectId="a54ebe7a-03ea-44b1-919b-d5fcf3674361"/>
+  <containedObjects classId="9de14907-ec23-4a07-96f0-85521cb6b53b" objectId="39067a0f-aab8-4eaa-9ace-b338ddcab9eb"/>
+  <containedObjects classId="51f2d5d8-ea4d-4064-8892-82951750031e" objectId="e117cd97-4fbb-401c-ab11-1e20c4c260e1"/>
+  <containedObjects classId="e68182ea-4237-4383-967f-90c1e3370bc7" objectId="35578546-e0d8-46cf-972f-34953259f2c8"/>
+  <configurationExtensionCompatibilityMode>8.3.14</configurationExtensionCompatibilityMode>
+  <defaultRunMode>ManagedApplication</defaultRunMode>
+  <usePurposes>PersonalComputer</usePurposes>
+  <scriptVariant>Russian</scriptVariant>
+  <defaultLanguage>Language.Русский</defaultLanguage>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
+  <modalityUseMode>DontUse</modalityUseMode>
+  <synchronousPlatformExtensionAndAddInCallUseMode>DontUse</synchronousPlatformExtensionAndAddInCallUseMode>
+  <compatibilityMode>8.3.14</compatibilityMode>
+  <languages uuid="0439f1ae-3fde-4099-bdd8-edf14e8d562f">
+    <name>Русский</name>
+    <synonym>
+      <key>en</key>
+      <value>Русский</value>
+    </synonym>
+    <synonym>
+      <key>ru</key>
+      <value>Русский</value>
+    </synonym>
+    <languageCode>ru</languageCode>
+  </languages>
+  <subsystems>Subsystem.Предприятие</subsystems>
+  <subsystems>Subsystem.УчетТовара</subsystems>
+  <commonPictures>CommonPicture.Предприятие</commonPictures>
+  <commonPictures>CommonPicture.УчетТовара</commonPictures>
+  <catalogs>Catalog.Номенклатура</catalogs>
+  <catalogs>Catalog.Организации</catalogs>
+  <catalogs>Catalog.Склады</catalogs>
+  <catalogs>Catalog.ХарактеристикиНоменклатуры</catalogs>
+  <catalogs>Catalog.ВидыНоменклатуры</catalogs>
+  <documents>Document.ПриходТовара</documents>
+  <documents>Document.РасходТовара</documents>
+  <reports>Report.ТоварыНаСкладах</reports>
+  <accumulationRegisters>AccumulationRegister.ТоварыНаСкладах</accumulationRegisters>
+  <accumulationRegisters>AccumulationRegister.Закупки</accumulationRegisters>
+</mdclass:Configuration>
