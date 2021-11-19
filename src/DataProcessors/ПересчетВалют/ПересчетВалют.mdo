@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:DataProcessor xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="57a275bd-4eea-4b8d-b52a-8eb34b672f52">
+  <producedTypes>
+    <objectType typeId="e577d336-3147-4108-927e-8470749f2aa0" valueTypeId="ae87bba5-ff07-4725-8c5a-db5758c19ef2"/>
+    <managerType typeId="3b6bbbca-e91e-4cad-bab5-2a3aabe6a783" valueTypeId="8bfb518b-6c48-45ad-bfb7-75209ca6828f"/>
+  </producedTypes>
+  <name>ПересчетВалют</name>
+  <synonym>
+    <key>ru</key>
+    <value>Пересчет валют</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <defaultForm>DataProcessor.ПересчетВалют.Form.Форма</defaultForm>
+  <forms uuid="79eb666d-1424-47c5-b36e-8f410ccd9940">
+    <name>Форма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Форма</value>
+    </synonym>
+    <usePurposes>PersonalComputer</usePurposes>
+    <usePurposes>MobileDevice</usePurposes>
+  </forms>
+</mdclass:DataProcessor>

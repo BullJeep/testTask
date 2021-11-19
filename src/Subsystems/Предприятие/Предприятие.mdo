@@ -11,4 +11,6 @@
     <picture>CommonPicture.Предприятие</picture>
   </picture>
   <content>Catalog.Организации</content>
+  <content>DataProcessor.СравнениеСтроковыхПредставленийВерсий</content>
+  <content>DataProcessor.ПересчетВалют</content>
 </mdclass:Subsystem>

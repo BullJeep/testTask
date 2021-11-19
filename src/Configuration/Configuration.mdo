@@ -15,6 +15,11 @@
   <defaultRunMode>ManagedApplication</defaultRunMode>
   <usePurposes>PersonalComputer</usePurposes>
   <scriptVariant>Russian</scriptVariant>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
   <defaultLanguage>Language.Русский</defaultLanguage>
   <dataLockControlMode>Managed</dataLockControlMode>
   <objectAutonumerationMode>NotAutoFree</objectAutonumerationMode>
@@ -45,6 +50,9 @@
   <documents>Document.ПриходТовара</documents>
   <documents>Document.РасходТовара</documents>
   <reports>Report.ТоварыНаСкладах</reports>
+  <reports>Report.Новинки</reports>
+  <dataProcessors>DataProcessor.СравнениеСтроковыхПредставленийВерсий</dataProcessors>
+  <dataProcessors>DataProcessor.ПересчетВалют</dataProcessors>
   <accumulationRegisters>AccumulationRegister.ТоварыНаСкладах</accumulationRegisters>
   <accumulationRegisters>AccumulationRegister.Закупки</accumulationRegisters>
 </mdclass:Configuration>

@@ -4,6 +4,6 @@
   <top xsi:type="cai:CaiPanel" id="54c919ee-f63e-4bba-9f75-ccf0e43de941" name="ToolsPanel"/>
   <left xsi:type="cai:CaiPanel" id="b2da1d99-9467-45ef-a093-37491eda8eeb" name="SectionPanel" displayType="PictureAndText"/>
   <left xsi:type="cai:CaiPanel" id="4f294b59-db83-4745-bd84-ec9ccba97de9" name="FunctionsPanel"/>
-  <unset id="bcbdf28e-e943-4fab-9157-d0360aef366c" name="HistoryPanel"/>
-  <unset id="035f5bb5-f91e-4122-ab76-a222452ee598" name="FavoritePanel"/>
+  <unset id="13322b22-3960-4d68-93a6-fe2dd7f28ca3" name="FavoritePanel"/>
+  <unset id="c933ac92-92cd-459d-81cc-e0c8a83ced99" name="HistoryPanel"/>
 </cai:ClientApplicationInterface>

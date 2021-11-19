@@ -112,6 +112,7 @@
 				<v8:DateFractions>DateTime</v8:DateFractions>
 			</v8:DateQualifiers>
 		</valueType>
+		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
 		<expression>&amp;СтандартныйПериод.ДатаНачала</expression>
 		<availableAsField>false</availableAsField>
@@ -130,6 +131,7 @@
 				<v8:DateFractions>DateTime</v8:DateFractions>
 			</v8:DateQualifiers>
 		</valueType>
+		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
 		<expression>&amp;СтандартныйПериод.ДатаОкончания</expression>
 		<availableAsField>false</availableAsField>
@@ -145,6 +147,7 @@
 		<valueType>
 			<v8:Type>v8:StandardPeriod</v8:Type>
 		</valueType>
+		<value xsi:nil="true"/>
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<settingsVariant>
@@ -172,6 +175,7 @@
 				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 					<dcscor:use>false</dcscor:use>
 					<dcscor:parameter>СтандартныйПериод</dcscor:parameter>
+					<dcscor:value xsi:nil="true"/>
 					<dcsset:userSettingID>8519e8b7-fb3b-4892-9149-a3e8fbf82df4</dcsset:userSettingID>
 				</dcscor:item>
 			</dcsset:dataParameters>
@@ -181,6 +185,8 @@
 						<dcsset:field>Организация</dcsset:field>
 						<dcsset:groupType>Items</dcsset:groupType>
 						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 					</dcsset:item>
 				</dcsset:groupItems>
 				<dcsset:order>
@@ -195,6 +201,8 @@
 							<dcsset:field>Склад</dcsset:field>
 							<dcsset:groupType>Items</dcsset:groupType>
 							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 						</dcsset:item>
 					</dcsset:groupItems>
 					<dcsset:order>
@@ -209,11 +217,15 @@
 								<dcsset:field>Номенклатура</dcsset:field>
 								<dcsset:groupType>Items</dcsset:groupType>
 								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 							</dcsset:item>
 							<dcsset:item xsi:type="dcsset:GroupItemField">
 								<dcsset:field>ХарактеристикаНоменклатуры</dcsset:field>
 								<dcsset:groupType>Items</dcsset:groupType>
 								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
 							</dcsset:item>
 						</dcsset:groupItems>
 						<dcsset:order>

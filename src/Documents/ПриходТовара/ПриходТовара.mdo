@@ -27,8 +27,8 @@
   <numberAllowedLength>Variable</numberAllowedLength>
   <checkUnique>true</checkUnique>
   <autonumbering>true</autonumbering>
-  <registerRecords>AccumulationRegister.ТоварыНаСкладах</registerRecords>
   <registerRecords>AccumulationRegister.Закупки</registerRecords>
+  <registerRecords>AccumulationRegister.ТоварыНаСкладах</registerRecords>
   <postInPrivilegedMode>true</postInPrivilegedMode>
   <unpostInPrivilegedMode>true</unpostInPrivilegedMode>
   <attributes uuid="12cba309-450e-489f-8d3e-9611b860f336">

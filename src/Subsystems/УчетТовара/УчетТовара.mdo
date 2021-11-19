@@ -19,4 +19,5 @@
   <content>AccumulationRegister.ТоварыНаСкладах</content>
   <content>AccumulationRegister.Закупки</content>
   <content>Catalog.ВидыНоменклатуры</content>
+  <content>Report.Новинки</content>
 </mdclass:Subsystem>
