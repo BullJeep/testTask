@@ -48,6 +48,14 @@
 				</v8:item>
 			</title>
 		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Регистратор</dataPath>
+			<field>Регистратор</field>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
 		<dataSource>ИсточникДанных1</dataSource>
 		<query>ВЫБРАТЬ
 	ЗакупкиМесяц.Номенклатура.Код + ВЫБОР
@@ -57,33 +65,23 @@
 	КОНЕЦ КАК СводныйКод,
 	ЗакупкиМесяц.Номенклатура,
 	ЗакупкиМесяц.ХарактеристикаНоменклатуры,
-	ЗакупкиМесяц.КоличествоОборот КАК Количество
+	ЗакупкиМесяц.КоличествоОборот КАК Количество,
+	ЗакупкиМесяц.Регистратор
 ИЗ
-	РегистрНакопления.Закупки.Обороты(,, Месяц,) КАК ЗакупкиМесяц
-		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Закупки.Обороты(,, Год,) КАК ЗакупкиГод
-		ПО ЗакупкиМесяц.Номенклатура = ЗакупкиГод.Номенклатура
+	РегистрНакопления.Закупки.Обороты(,, Запись,) КАК ЗакупкиМесяц
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.Закупки.Обороты(,, Запись,) КАК ЗакупкиГод
+		ПО ЗакупкиМесяц.Организация = ЗакупкиГод.Организация
+		И ЗакупкиМесяц.Номенклатура = ЗакупкиГод.Номенклатура
 		И ЗакупкиМесяц.ХарактеристикаНоменклатуры = ЗакупкиГод.ХарактеристикаНоменклатуры
-		И ЗакупкиГод.Период МЕЖДУ &amp;ДатаНачалаГод И &amp;ДатаОкончанияГод
+		И ЗакупкиГод.Период МЕЖДУ &amp;ДатаНачалаГода И &amp;ДатаОкончанияГода
 ГДЕ
-	ЗакупкиМесяц.Период МЕЖДУ &amp;ДатаНачалаМесяца И &amp;ДатаОкончанияМесяца
-	И ЕСТЬNULL(ЗакупкиГод.КоличествоОборот, 0) = 0</query>
+	ЕСТЬNULL(ЗакупкиГод.КоличествоОборот, 0) = 0
+	И ЗакупкиМесяц.Период МЕЖДУ &amp;ДатаНачалаМесяца И &amp;ДатаОкончанияМесяца</query>
 	</dataSet>
-	<parameter>
-		<name>ПериодМесяц</name>
-		<title xsi:type="v8:LocalStringType">
-			<v8:item>
-				<v8:lang>ru</v8:lang>
-				<v8:content>Период месяц</v8:content>
-			</v8:item>
-		</title>
-		<valueType>
-			<v8:Type>v8:StandardPeriod</v8:Type>
-		</valueType>
-		<value xsi:type="v8:StandardPeriod">
-			<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
-		</value>
-		<useRestriction>false</useRestriction>
-	</parameter>
+	<totalField>
+		<dataPath>Количество</dataPath>
+		<expression>Сумма(Количество)</expression>
+	</totalField>
 	<parameter>
 		<name>НачалоПериода</name>
 		<title xsi:type="v8:LocalStringType">
@@ -121,6 +119,22 @@
 		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
+		<name>ПериодМесяц</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период месяц</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>v8:StandardPeriod</v8:Type>
+		</valueType>
+		<value xsi:type="v8:StandardPeriod">
+			<v8:variant xsi:type="v8:StandardPeriodVariant">ThisMonth</v8:variant>
+		</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
 		<name>ДатаНачалаМесяца</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
@@ -128,13 +142,7 @@
 				<v8:content>Дата начала месяца</v8:content>
 			</v8:item>
 		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:nil="true"/>
+		<valueType/>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;ПериодМесяц.ДатаНачала</expression>
 		<availableAsField>false</availableAsField>
@@ -147,13 +155,7 @@
 				<v8:content>Дата окончания месяца</v8:content>
 			</v8:item>
 		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:nil="true"/>
+		<valueType/>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;ПериодМесяц.ДатаОкончания</expression>
 		<availableAsField>false</availableAsField>
@@ -175,39 +177,27 @@
 		<useRestriction>false</useRestriction>
 	</parameter>
 	<parameter>
-		<name>ДатаНачалаГод</name>
+		<name>ДатаНачалаГода</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Дата начала год</v8:content>
+				<v8:content>Дата начала года</v8:content>
 			</v8:item>
 		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:nil="true"/>
+		<valueType/>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;ПериодГод.ДатаНачала</expression>
 		<availableAsField>false</availableAsField>
 	</parameter>
 	<parameter>
-		<name>ДатаОкончанияГод</name>
+		<name>ДатаОкончанияГода</name>
 		<title xsi:type="v8:LocalStringType">
 			<v8:item>
 				<v8:lang>ru</v8:lang>
-				<v8:content>Дата окончания год</v8:content>
+				<v8:content>Дата окончания года</v8:content>
 			</v8:item>
 		</title>
-		<valueType>
-			<v8:Type>xs:dateTime</v8:Type>
-			<v8:DateQualifiers>
-				<v8:DateFractions>DateTime</v8:DateFractions>
-			</v8:DateQualifiers>
-		</valueType>
-		<value xsi:nil="true"/>
+		<valueType/>
 		<useRestriction>true</useRestriction>
 		<expression>&amp;ПериодГод.ДатаОкончания</expression>
 		<availableAsField>false</availableAsField>
@@ -225,6 +215,10 @@
 				</dcsset:item>
 				<dcsset:item xsi:type="dcsset:SelectedItemField">
 					<dcsset:field>СводныйКод</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Регистратор</dcsset:field>
 				</dcsset:item>
 			</dcsset:selection>
 			<dcsset:filter>
